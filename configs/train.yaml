@@ -1,0 +1,18 @@
+# YOLOv5s training settings. Weights come from Ultralytics (yolov5su.pt).
+model: yolov5su.pt
+epochs: 60
+patience: 15
+imgsz: 640
+batch: 8          # fits a 6 GB laptop GPU
+seed: 42
+workers: 4
+
+# Augmentation for broadcast footage
+degrees: 5.0      # small rotation, since stumps stay close to upright
+fliplr: 0.5       # horizontal flip
+flipud: 0.0       # stumps are never upside down
+hsv_v: 0.4        # brightness
+hsv_s: 0.5
+scale: 0.5
+translate: 0.1
+mosaic: 1.0
